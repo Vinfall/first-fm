@@ -1,0 +1,6 @@
+# Cache
+venv
+__pycache__/*
+# Secret
+tracks.txt
+.env.local
