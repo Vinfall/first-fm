@@ -32,7 +32,7 @@ _TO_IGNORE = [
 
 
 def load_secrets():
-    # Load screct credentials from local file
+    # Load secret credentials from local file
     secrets_file = ".env.local"
     if os.path.isfile(secrets_file):
         with open(secrets_file, "r") as f:
@@ -43,7 +43,7 @@ def load_secrets():
                     key, value = line.split(" = ")
                     doc[key.strip()] = value.strip().strip('"')
     else:
-        # Load screct credentials from environment variables
+        # Load secret credentials from environment variables
         doc = {
             "API_KEY": os.environ.get("PYLAST_API_KEY", "").strip(),
             "API_SECRET": os.environ.get("PYLAST_API_SECRET", "").strip(),
